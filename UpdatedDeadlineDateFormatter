@@ -1,0 +1,24 @@
+# Deadline and Date Formatter - Version 2
+from datetime import date
+
+# Get user inputs
+event_title = input("Enter event title: ").strip()
+year = int(input("Enter year: "))
+month = int(input("Enter month: "))
+day = int(input("Enter day: "))
+
+# Create a date object and format the values
+event_date = date(year, month, day)
+formatted_title = event_title.upper()
+month_name = event_date.strftime("%B")
+weekday_name = event_date.strftime("%A")
+readable_date = f"{month_name} {event_date.day}, {event_date.year}"
+
+# Display formatted output matching the sample
+print("\nFormatted Output:")
+print(f"Event: {formatted_title}")
+print(f"Date: {readable_date}")
+print(f"Year: {event_date.year}")
+print(f"Month: {month_name}")
+print(f"Day: {event_date.day}")
+print(f"Weekday: {weekday_name}")
